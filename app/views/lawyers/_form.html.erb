@@ -1,0 +1,30 @@
+<% if @lawyer.errors.any? %>
+  <ul>
+    <%= @lawyer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%= form_for @lawyer do |f| %>
+  <div>
+    <%= f.label :name %>
+  </div>
+  <div>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :title %>
+  </div>
+  <div>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :bio %>
+  </div>
+  <div>
+    <%= f.cktext_area :bio, rows: 10 %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
