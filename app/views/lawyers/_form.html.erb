@@ -5,7 +5,7 @@
     <% end %>
   </ul>
 <% end %>
-<%= form_for @lawyer do |f| %>
+<%= form_for @lawyer, :html => {:mulipart => true} do |f| %>
   <div>
     <%= f.label :name %>
   </div>
@@ -19,10 +19,19 @@
     <%= f.text_field :title %>
   </div>
   <div>
+    <%= f.file_field :image %>
+  </div>
+  <div>
     <%= f.label :bio %>
   </div>
   <div>
     <%= f.cktext_area :bio, rows: 10 %>
+  </div>
+  <div>
+    <%= f.label :admissions %>
+  </div>
+  <div>
+    <%= f.cktext_area :admissions, rows: 10 %>
   </div>
   <div>
     <%= f.submit %>

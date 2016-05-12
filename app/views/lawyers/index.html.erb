@@ -2,7 +2,9 @@
 <% @lawyers.each do |lawyer| %>
   <h3><%= lawyer.name.html_safe %></h3>
   <h4><%= lawyer.title.html_safe %></h4>
+  <%= image_tag lawyer.image_url(:thumb).to_s %>
   <p><%= lawyer.bio.html_safe %></p>
+  <p><%= lawyer.admissions.html_safe %></p>
   <%= link_to "Edit lawyer", edit_lawyer_path(lawyer) %>
   <% if lawyer != @lawyers.last %>
   <hr />
