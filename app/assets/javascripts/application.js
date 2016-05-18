@@ -11,8 +11,34 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
+//= require bootstrap-sprockets
 //= require turbolinks
+//= require theme/moderniz.min
+//= require theme/jquery-migrate.min
+//= require theme/jquery.easing.1.3.min
+//= require theme/bootstrap
+//= require theme/jquery.flexslider-min
+//= require theme/wow.min
+//= require theme/jquery.sticky
+//= require theme/bootstrap-hover-dropdown.min
+//= require theme/jquery.stellar.min
+//= require theme/owl.carousel.min
+//= require theme/jquery.mb.YTPlayer.min
+//= require theme/waypoints.min
+//= require theme/easypiechart
+//= require theme/jquery.isotope.min
+//= require theme/jquery.imagesloaded.min
+//= require theme/jquery.counterup.min
+//= require theme/jquery.countdown
+//= require theme/contact_me
+//= require theme/jqBootstrapValidation
+//= require theme/custom
+//= require theme/jquery.mixitup.min
+//= require theme/jquery.themepunch.tools.min
+//= require theme/jquery.themepunch.revolution
+//= require theme/revolution-custom
+//= require theme/isotope-custom
+//= require theme/pace.min
 //= require ckeditor/init
 //= require_tree .

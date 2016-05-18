@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   resources :lawyers
   
-  root to: "pages#index"
+  root to: "pages#home"
 end

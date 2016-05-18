@@ -1,0 +1,95 @@
+
+  <section id="home" class="home-video full-screen-dem" data-stellar-background-ratio="0.5">
+        <div class="parallax-overlay"></div>
+          
+
+        <div class="home-content text-center">
+            <div class="container">
+                <!-- <h1 class=" slide-logo">The Difference Engine</h1> -->
+                <div class="main-flex-slider">
+                    <ul class="slides">
+                        <!-- <li>
+                            <h1>Web Apps</h1>
+                        </li>
+                        <li>
+                            <h1>Websites</h1>
+                        </li> -->
+                        <li>
+                            <h1>NIRO LAW</h1>
+                        </li>
+                    </ul>
+                </div>
+                <h2 class="slide-btm-text">TRIAL LAWYERS</h2>
+                <div class="home-arrow-down text-center">
+                    <p class="scrollto"><a href="#contact" class="btn btn-lg btn-theme-color scrollto">Contact Us</a><span></span><a href="#about" class="btn btn-lg btn-theme-color">Learn More</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+  <%= render 'about' %>
+  <%= render 'practice_areas' %>
+  <%= render 'contact' %>
+
+  
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript">
+      var myLatlng;
+      var map;
+      var marker;
+
+      function initialize() {
+          myLatlng = new google.maps.LatLng(41.88161, -87.633358);
+
+          var mapOptions = {
+              zoom: 13,
+              center: myLatlng,
+              mapTypeId: google.maps.MapTypeId.ROADMAP,
+              scrollwheel: false,
+              draggable: false
+          };
+          map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+          var contentString = '<h5>Niro Law</h5><p>181 West Madison - Ste. 4600, Chicago, IL 60602</p>';
+
+          var infowindow = new google.maps.InfoWindow({
+              content: contentString
+          });
+
+          marker = new google.maps.Marker({
+              position: myLatlng,
+              map: map,
+              title: 'Marker'
+          });
+
+          google.maps.event.addListener(marker, 'click', function () {
+              infowindow.open(map, marker);
+          });
+
+          var styles = [
+            {
+              stylers: [
+                { hue: "#0200e6" },
+                { saturation: -20 }
+              ]
+            },{
+              featureType: "road",
+              elementType: "geometry",
+              stylers: [
+                { lightness: 100 },
+                { visibility: "simplified" }
+              ]
+            },{
+              featureType: "road",
+              elementType: "labels",
+              stylers: [
+                { visibility: "off" }
+              ]
+            }
+          ];
+
+          map.setOptions({styles: styles});
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+    <%= javascript_include_tag 'application'%>
