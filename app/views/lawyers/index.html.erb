@@ -19,6 +19,7 @@
               <% @lawyers.each do |lawyer| %>
                 <h3><%= lawyer.name.html_safe %></h3>
                 <%= image_tag lawyer.image_url(:thumb).to_s %>
+                <br>
                 <%= link_to "Edit lawyer", edit_lawyer_path(lawyer) %>
                 <% if lawyer != @lawyers.last %>
                 <hr />
