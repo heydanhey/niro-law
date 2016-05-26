@@ -75,7 +75,8 @@ $(function() {
 	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 	      if (target.length) {
 	        $('html,body').animate({
-	          scrollTop: target.offset().top - 50
+            //replaced 50 with 0 to account for change of navbar setting.
+	          scrollTop: target.offset().top - 0
 	        }, 1000);
 	        return false;
 	      }
